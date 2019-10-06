@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ListView } from "react-native";
+import { FlatList } from "react-native";
 import {
   Container,
   Header,
@@ -30,7 +30,7 @@ const datas = [
 class MultiListSwipe extends Component {
   constructor(props) {
     super(props);
-    this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    this.ds = new FlatList.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
       basic: true,
       listViewData: datas
